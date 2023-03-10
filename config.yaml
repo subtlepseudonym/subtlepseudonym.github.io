@@ -10,7 +10,7 @@ pluralizelisttitles: false
 params:
   brand: Connor Demille
   brand_image: /images/lemon_square_small.jpg
-  description: Engineer, Tinkerer, Hobbyist
+  description: Maker, Engineer, Hobbyist
   dark_mode: true
 
   menu:
@@ -27,9 +27,9 @@ params:
 
   github_url: https://github.com/subtlepseudonym
   kofi_url: https://ko-fi.com/subtlepseudonym
-  medium_url: https://subtlepseudonym.medium.com
   linkedin_url: https://www.linkedin.com/in/subtlepseudonym
   mastodon_url: https://mastodon.sdf.org/@subtlepseudonym
+  medium_url: https://subtlepseudonym.medium.com
 
 
 taxonomies:
