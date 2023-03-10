@@ -35,7 +35,7 @@ The important part of this output is the last line —
 These options let you decide what to do with each hunk of changes.
 
 - **y** — stage this hunk
-- **n** — don’t stage this hunk
+- **n** — don't stage this hunk
 - **q** — do not stage this hunk or any of the remaining ones
 - **a** — stage this hunk and all later hunks in the file
 - **d** — do not stage this hunk or any of the later hunks in the file
@@ -59,7 +59,7 @@ Stage this hunk [y,n,q,a,d,e,?]?
 ```
 
 ### Manually editing a hunk
-Once we’ve decided on a hunk to edit, we can enter the **e** option and we’re dropped into our default editor (as specified by `$EDITOR`). The file will contain the hunk as well as a few comments describing how to edit the hunk. For this example, I’ve elected not to split the hunk prior to editing.
+Once we've decided on a hunk to edit, we can enter the **e** option and we're dropped into our default editor (as specified by `$EDITOR`). The file will contain the hunk as well as a few comments describing how to edit the hunk. For this example, I've elected not to split the hunk prior to editing.
 
 ```diff
 # Manual hunk edit mode -- see bottom for a quick guide.
@@ -85,7 +85,7 @@ Some context.
 # aborted and the hunk is left unchanged.
 ```
 
-From here we can negate line additions or deletions. If we make any other edits, we should ensure that the edited line is prepended with a ‘+’. For example, we can change our example like so:
+From here we can negate line additions or deletions. If we make any other edits, we should ensure that the edited line is prepended with a ‘+'. For example, we can change our example like so:
 
 ```diff
 @@ -1,5 +1,5 @@
@@ -104,6 +104,6 @@ From here we can negate line additions or deletions. If we make any other edits,
 ```
 
 ### Conclusion
-I use git patch adding everyday and honestly can’t believe how long I’d been writing code without it. The intent of this article was to provide a simple walkthrough of `git add --patch` along with a brief explanation of its features.
+I use git patch adding everyday and honestly can't believe how long I'd been writing code without it. The intent of this article was to provide a simple walkthrough of `git add --patch` along with a brief explanation of its features.
 
 The best way to learn about this git feature is, of course, using it directly, but hopefully this article cleared up any points of confusion or made the process more approachable. If not, check out these posts on the same subject by [Markus Wein](https://nuclearsquid.com/writings/git-add/) and [Kenny Ballou](https://kennyballou.com/blog/2015/10/art-manually-edit-hunks).
