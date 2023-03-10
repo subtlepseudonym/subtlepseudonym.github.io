@@ -1,0 +1,36 @@
+theme: poison
+title: Connor Demille
+
+languageCode: en-us
+enableRobotsTXT: true
+
+paginate: 5
+pluralizelisttitles: false
+
+params:
+  brand: Connor Demille
+  brand_image: /images/lemon_square_small.jpg
+  description: Engineer, Tinkerer, Hobbyist
+  dark_mode: true
+
+  menu:
+    - Name: Articles
+      URL: /articles/
+      HasChildren: true
+      Limit: 0
+    - Name: About
+      URL: /about/
+      HasChildren: false
+    - Name: Projects
+      URL: /projects/
+      HasChildren: false
+
+  github_url: https://github.com/subtlepseudonym
+  kofi_url: https://ko-fi.com/subtlepseudonym
+  medium_url: https://subtlepseudonym.medium.com
+  linkedin_url: https://www.linkedin.com/in/subtlepseudonym
+  mastodon_url: https://mastodon.sdf.org/@subtlepseudonym
+
+
+taxonomies:
+  series: series
