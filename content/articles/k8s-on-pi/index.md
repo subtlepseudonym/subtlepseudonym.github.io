@@ -24,7 +24,7 @@ Log into your first pi (we'll refer this as `node1`). The default user:pass is `
 
 If you do not have your pi connected to a monitor and keyboard or simply don't have physical access to it, add an empty file at /boot/ssh to the sd card before inserting it into the pi. [This will enable ssh on first boot](https://www.raspberrypi.com/news/a-security-update-for-raspbian-pixel/).
 
-![photo of the first few lines of terminal output after boot on the rapsberry pi](pi_terminal.webp)
+![photo of the first few lines of terminal output after boot on the rapsberry pi](pi-terminal.webp)
 
 A fun note about this command --
 > The raspi-config binary doesn't have an official non-interactive API, so this command may not work in the future. You can either use the interactive mode by omitting `nonint do_ssh 0` and using the GUI or by looking [at the source](https://github.com/raspberrypi-ui/rc_gui/blob/master/src/rc_gui.c) and updating the command. In case the link to source above is broken, you can also check [an archive of the page](https://web.archive.org/web/20200718051303/https://github.com/raspberrypi-ui/rc_gui/blob/master/src/rc_gui.c).
@@ -32,7 +32,7 @@ A fun note about this command --
 ### Get the setup script
 Run `wget https://raw.githubusercontent.com/subtlepseudonym/pi/master/setup/pi_raspbian.sh`, which will download a setup script that will set your hostname, create a non-default user, and install some useful packages.
 
-![gif of downloading the setup script](download_script.gif)
+![gif of downloading the setup script](download-script.gif)
 
 > This script is fairly opinionated and will set up some basic directories and change your default shell. I recommend reading through the script before running it and tailoring it to your use case.
 
@@ -41,11 +41,11 @@ Add executable permissions to the setup script with `chmod +x setup.sh` and run 
 
 You will be prompted for a password and then you can go get a coffee, because it takes a few minutes to set things up. When the script is finished, your pi will reboot.
 
-![gif of running the setup script](run_setup.gif)
+![gif of running the setup script](run-setup.gif)
 
 `ssh` into the pi and run the cleanup script via `sudo ./cleanup.sh`. This removes the default pi user and its home directory.
 
-![gif of running the cleanup script](run_cleanup.gif)
+![gif of running the cleanup script](run-cleanup.gif)
 
 ### Install k3s
 We'll be using [k3s](https://github.com/k3s-io/k3s), a stripped-down version of kubernetes. Download the install script with `curl -sfL https://get.k3s.io | sh -`. This will install k3s and get it started as a system service.
@@ -75,7 +75,7 @@ This will get the k3s agent started on `node2` and register it with your k3s ser
 ### Test your cluster setup
 So long as `node1` is discoverable by `node2`, your kubernetes cluster should now be set up! You can confirm this by running `k3s kubectl get nodes` on `node1` and ensuring that both `node1` and `node2` are listed
 
-![running kubectl get nodes](get_nodes.gif)
+![running kubectl get nodes](get-nodes.gif)
 
 ---
 
