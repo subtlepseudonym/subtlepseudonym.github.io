@@ -1,5 +1,5 @@
 theme: poison
-title: Connor Demille
+title: subtlepseudonym
 
 languageCode: en-us
 enableRobotsTXT: true
@@ -18,11 +18,11 @@ params:
       URL: /articles/
       HasChildren: true
       Limit: 0
-    - Name: About
-      URL: /about/
-      HasChildren: false
     - Name: Projects
       URL: /projects/
+      HasChildren: false
+    - Name: About
+      URL: /about/
       HasChildren: false
 
   github_url: https://github.com/subtlepseudonym
