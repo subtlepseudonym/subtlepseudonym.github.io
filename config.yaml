@@ -1,5 +1,7 @@
 theme: poison
 title: subtlepseudonym
+author:
+  name: Connor Demille
 
 languageCode: en-us
 enableRobotsTXT: true
