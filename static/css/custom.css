@@ -1,0 +1,51 @@
+/* Empty css file that users can override in their own /static/css/custom.css file */
+@media (max-width: 48em) {
+	.layout {
+		display: none;
+	}
+	.layout-mobile {
+		display: inline;
+	}
+	.sidebar {
+		padding: 1rem 1rem;
+	}
+	.sidebar .author {
+		margin-left: 90px;
+		text-align: left;
+		display: grid;
+	}
+	.sidebar .brand {
+		float: left;
+	}
+	.sidebar .container {
+		padding: 0;
+	}
+	.sidebar nav {
+		text-align: right;
+		display: grid;
+	}
+	.sidebar nav ul {
+		margin: 0em;
+		position: relative;
+		top: 20%;
+		height: 40px;
+	}
+	.sidebar nav ul li {
+		display: inline;
+		margin-right: 0.25em;
+	}
+	.sidebar img {
+		margin: 0em;
+		height: 80px;
+		width: 80px;
+	}
+}
+
+@media (min-width: 48em) {
+	.layout {
+		display: inline;
+	}
+	.layout-mobile {
+		display: none;
+	}
+}
