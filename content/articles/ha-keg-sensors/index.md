@@ -48,29 +48,29 @@ Those goals precipitated the following data structures:
 // KegState is the exported representation of a keg and its flow meter
 type KegState struct {
 	Keg struct {
-		Type   string
-		Volume float64
+		Type   string  // "corny", "sixtel", etc
+		Volume float64 // in liters
 	}
 	Sensor struct {
-		Model        string
-		FlowConstant float64
+		Model        string  // "fl-s401a", "ux0151", etc
+		FlowConstant float64 // in 1/(liters*seconds)
 	}
 
-	Contents string
-	Pin      int
-	Poured   float64
+	Contents string  // "seltzer", "jai alai", etc
+	Pin      int     // gpio pin number
+	Poured   float64 // in liters
 }
 
 // DHTState is the exported representation of a temperature / humidity sensor
 type DHTState struct {
-	Model       string
-	Pin         int
-	Temperature float32
-	Humidity    float32
+	Model       string  // "dht22"
+	Pin         int     // gpio pin number
+	Temperature float32 // in degrees centigrade
+	Humidity    float32 // in percent
 }
 ```
 
-These structures are the representations of the flow meters and temperature / humidity sensors as they are read from the config file and as they're exported on the `/state` HTTP endpoint.
+These structures are the representations of the flow meters and temperature / humidity sensors as they are read from the config file and as they're exported on the `/state` HTTP endpoint. The internal representations are a bit more complex in order to handle concurrent updates, live config reloads, and store information on discrete pours. That last feature actually comprises a significant portion of the flow meter update logic (and most of the bugs) despite being an unplanned feature that I just thought was neat. If you're curious, the discrete pour logic can be [found here](https://github.com/subtlepseudonym/kegerator/blob/00210a010fde41f6788851a82bf36740a3f93ae8/flow.go#L203).
 
 Now that the POC shows the sensors working (reasonably) accurately, time to make the service more useful.
 Aside about using raspberry pi, making software updates really easy compared to an ESP32 or similar.
@@ -98,4 +98,4 @@ Settling for `useradd keg` and `sudo su keg && nohup kegerator >> keg.log &`
 Calibrating the uxcell with still water turns out to have been a bad idea. When the keg was kicked, had measured ~21.369L dispensed, which is unlikely for a 18.93L keg (err rate of ~12.9%). Not a great err rate measurement considering both myself and Jenny ran CO2 through it on the "last" pour, which flows _really_ fast. Haven't actually fixed this yet, but won't be able to until the next keg is kicked due to replacing the uxcell flow meter.
 
 ### Signal leakage
-The uxcell is putting off enough RF that the digiten is picking it up and recording phantom pours. Unsure if this is the uxcell poorly regulating voltage (and just dumping modulated 5V pulses into the signal cable) or if it's a result of using a longer wire for the uxcell. Testing this by installing a digiten (which has greater accuracy anyway).
+The uxcell is putting off enough RF that the digiten is picking it up and recording phantom pours. Unsure if this is the uxcell poorly regulating voltage (and just dumping modulated 5V pulses into the signal cable) or if it's a result of using a longer wire for the uxcell. Testing this by installing a digiten (which has greater accuracy anyway). Initial testing, without installing digiten in-line, seem positive. No signal leakage from a few pours and wires of roughly the same length.
