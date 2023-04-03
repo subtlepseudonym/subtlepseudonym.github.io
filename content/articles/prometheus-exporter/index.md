@@ -1,6 +1,6 @@
 ---
 date: 2021-02-14
-title: "Prometheus Exporter"
+title: "Creating a Prometheus Exporter for Pihole"
 draft: false
 ---
 ### First, some introduction
