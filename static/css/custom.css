@@ -49,3 +49,8 @@
 		display: none;
 	}
 }
+
+.article-toc nav {
+	margin-left: 0em;
+	overflow-x: hidden;
+}
