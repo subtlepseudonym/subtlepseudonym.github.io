@@ -22,14 +22,14 @@ The kegerator has a new gas line and we're ready to get started installing some 
 - something to write software on
 
 ## Getting ready
-The first thing to do is ensure that all our components function and give _reasonably_ accurate results. The DHTs ostensibly require calibration, but I've found them to be accurate enough right out of the packaging. As for the flow meters, we just need to make sure that they work; they'll require calibration each time you run a different liquid through them.
+The first thing to do is ensure that all our components function and give _reasonably_ accurate results. The DHTs (for sensing temperature and humidity) ostensibly require calibration, but I've found them to be accurate enough right out of the packaging. As for the flow meters, we just need to make sure that they work; they'll require calibration each time you run a different liquid through them.
 
 > Setting up the raspberry pi is outside the scope of this article. If you'd like a walkthrough of that process, the first part of [this article](https://subtlepseudonym.com/articles/k8s-on-pi/) includes one.
 
 ### DHTs
-The simplest to set up are the temperature / humidity sensors: connect the sensors the any available GPIO pins and run some test code to get a few measurements out of them.
+The simplest to set up are the temperature / humidity sensors: connect the sensors to any available GPIO pins and run some test code to get a few measurements out of them.
 
-The repo linked above contains some code for testing the sensors, but you'll need a golang build environment in order to compile it.
+The repo linked above contains some code for testing the sensors. You'll need a golang and docker build environment in order to compile it.
 ```bash
 git clone https://github.com/subtlepseudonym/kegerator.git && cd kegerator
 make build
@@ -39,7 +39,7 @@ ssh $USER@$RASPI_HOST
 ```
 
 ### Flow meters
-Setting up the flow meters is a similar same process, but has an extra step: they need to be modified a bit. As-is, the flow meters have a very small diameter hole on the input side. This restricts the flow rate significantly and gets us nowhere near the ~5L/min rate we want from our taps. To fix this, it's back to drilling. 
+Setting up the flow meters is a similar process, but they need to be modified a bit. As-is, the flow meters have a very small diameter hole on the input side. This restricts the flow rate significantly and gets us nowhere near the ~5L/min rate we want from our taps. To fix this, it's back to drilling. 
 
 To avoid damaging the spinning wheel inside the flow meter, we should take the device apart and drill only the back shell. A 1/8" bit fits perfectly, although it's a good idea to run it back and forth for a while to ensure we don't have any hanging plastic bits.
 
@@ -48,7 +48,7 @@ To avoid damaging the spinning wheel inside the flow meter, we should take the d
 Once the drilling is done, it's time to test the sensor output. I suggest connecting a short length of hose to the input end of the flow meter so it's easier to keep water away from the electronics.
 
 ## Wire work
-I initially tried installing everything with short lengths of wire between each component and it made replacing empty kegs a frustrating endeavour. In my experience, signal transmission is fine over a couple feet, so we're safe to run wire across the ceiling and walls of the fridge and keep things tidy.
+I initially tried installing everything with short lengths of wire between each component and it made replacing empty kegs a frustrating endeavour. In my experience, signal transmission is fine over a couple feet, so we're safe to run wire across the ceiling and walls of the fridge to keep things tidy.
 
 ![preparing some lengths of wire](wire-crimping.jpg)
 
