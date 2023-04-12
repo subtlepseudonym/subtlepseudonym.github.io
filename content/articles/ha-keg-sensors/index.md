@@ -1,8 +1,10 @@
 ---
 date: 2023-03-13T10:33:58-04:00
 title: "High-Availability Keg Sensors"
-draft: true
+draft: false
 ---
+[DRAFT]
+
 The kegerator has a new gas line and we're ready to get started installing some sensors. The goal with these sensors is to keep track of how much seltzer I've got left and how long it takes the fridge to cool down kegs that have been refilled with room-temperature water.
 
 [https://github.com/subtlepseudonym/kegerator](https://github.com/subtlepseudonym/kegerator)
