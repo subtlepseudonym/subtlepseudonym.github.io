@@ -75,4 +75,4 @@ In this stage of the project, we drilled two holes in the rear of the kegerator:
 
 In the following stage, we'll cover installing flow, temperature, and humidity sensors as well as writing some software to collect and surface that information.
 
-> In the meantime, the code can be [found here](https://github.com/subtlepseudonym/kegerator) and I'll replace this note with a link to the second article once it's finished.
+> The code for part two can be [found here](https://github.com/subtlepseudonym/kegerator) and the article can be [found here](https://subtlepseudonym.com/articles/ha-keg-sensors/)
