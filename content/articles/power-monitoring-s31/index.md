@@ -11,6 +11,10 @@ draft: false
 
 I run both a server and a small cluster of raspberry pis at home, in addition to some networking equipment. This (probably) represents a significant amount of my power usage. The problem is, I know these things tend to be power-hungry, but I don't know _exactly how much_ power they're really drawing. To remedy this, I spent some time working with IoT plugs, prometheus, and grafana to set up real-time power monitoring.
 
+{{< image src="windmills.jpg" alt="header image" >}}
+Taken by [Laura Penwell](https://www.pexels.com/@laura-penwell-309923/)
+{{< /image >}}
+
 ## What we'll need
 - [Sonoff S31](https://sonoff.tech/product/smart-plugs/s31-s31lite/) (or any esp8266 based plug with power monitoring)
 - [USB to TTL adapter](https://www.amazon.com/IZOKEE-CP2102-Converter-Adapter-Downloader/dp/B07D6LLX19) (for flashing the S31)
