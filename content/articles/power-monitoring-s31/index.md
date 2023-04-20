@@ -88,13 +88,15 @@ Compilation can be kicked off with the following command, which will output the 
 ```
 
 ### Flashing minimal firmware
-First, hold down the small button that can be found next to the GPIO contacts you soldered earlier and plug the usb-to-ttl adapter into your computer. This will put the S31 into flashing mode and allow us to load new firmware.
+First, hold down the small button that can be found next to the GPIO contacts you soldered earlier and plug the usb-to-ttl adapter into your computer. This will put the S31 into programming mode and allow us to load new firmware.
 
 ![the S31's gpio0 button](gpio0-button.jpg)
 
 There are several ways to flash this board, but I found the simplest to be using [tasmotizer](https://github.com/tasmota/tasmotizer). Check the `Release` radio button and choose `tasmota-lite.bin` from the dropdown. Ensure that `Erase before flashing` is true and we're ready to flash!
 
-![the tasmotizer user interface](tasmotizer.jpg)
+{{< image src="tasmotizer.jpg" alt="the tasmotizer user interface" >}}
+A smaller binary is available as tasmota-minimal on [the downloads page](http://ota.tasmota.com/tasmota/release/)
+{{< /image >}}
 
 ### Flashing custom firmware
 For this step, we're essentially repeating the previous using the binary we compiled earlier. The only difference is, in the tasmotizer UI, select the `BIN file` radio button rather than `Release` and open the `tasmota-sensors.bin` file.
