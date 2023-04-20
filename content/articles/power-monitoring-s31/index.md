@@ -1,14 +1,20 @@
 ---
 date: 2023-04-18T15:32:43-04:00
 title: "Power Monitoring with Tasmota"
-draft: true
+draft: false
 ---
-I run both a server and a small cluster of raspberry pis at home, in addition to some networking equipment. This (probably) represents a significant amount of my power usage. The problem is, I know these things tend to be power-hungry, but I don't know _exactly how much_ power they're really drawing. To remedy this, I spend some time setting up power monitoring IoT plugs.
+---
+
+[ DRAFT ]
+
+---
+
+I run both a server and a small cluster of raspberry pis at home, in addition to some networking equipment. This (probably) represents a significant amount of my power usage. The problem is, I know these things tend to be power-hungry, but I don't know _exactly how much_ power they're really drawing. To remedy this, I spent some time working with IoT plugs, prometheus, and grafana to set up real-time power monitoring.
 
 ## What we'll need
 - [Sonoff S31](https://sonoff.tech/product/smart-plugs/s31-s31lite/) (or any esp8266 based plug with power monitoring)
 - [USB to TTL adapter](https://www.amazon.com/IZOKEE-CP2102-Converter-Adapter-Downloader/dp/B07D6LLX19) (for flashing the S31)
-- [jumper wires](https://www.amazon.com/EDGELEC-cables-alambre-Dupont-colores/dp/B07GD2BWPY) (you can never have too many of these)
+- [jumper wires](https://www.amazon.com/EDGELEC-cables-alambre-Dupont-colores/dp/B07GD2BWPY) (you can't have too many of these)
 - [soldering iron](https://www.amazon.com/Liouhoum-Auto-Sleep-Adjustable-Temperature-Thermostatic/dp/B08PZBPXLZ) and [solder sucker](https://www.amazon.com/Teenitor-Solder-Sucker-Desoldering-Removal/dp/B0739LXQ6N)
 
 That list puts the cost of this project around $35-60 depending upon whether you already have access to a soldering kit. I also used a stand with a magnifying glass and alligator clips [like this](https://www.amazon.com/Double-Third-Clamp-Alligator-Magnifying/dp/B006ZBJU04) to make holding wires together a bit easier.
@@ -41,7 +47,7 @@ Let everything cool off, then attach the jumper wires to the usb-to-ttl adapter.
 Double check that you're attached to 3v3 power, *not* 5v. Powering the S31 with five volts will turn it on, but may damage the onboard wifi module.
 
 ## Flashing custom firmware
-We'll be flashing the plug with [tasmota](), which is open source and feature rich. Before we can do that though, there are two stumbling blocks: the default release doesn't include a prometheus exporter and the S31 doesn't have enough memory to directly flash the binary we're going to compile. So, we have to load the firmware using the following steps:
+We'll be flashing the plug with [tasmota](https://tasmota.github.io/docs/), which is open source and feature rich. Before we can do that though, there are two stumbling blocks: the default release doesn't include a prometheus exporter and the S31 doesn't have enough memory to directly flash the binary we're going to compile. So, we have to load the firmware using the following steps:
 
 1. Clone the tasmota repo and compile the firmware with a custom configuration
 2. Flash the S31 with the tasmota-lite release
@@ -50,11 +56,11 @@ We'll be flashing the plug with [tasmota](), which is open source and feature ri
 >Note: The tasmota project has been in active development since the writing of this article, so you may be able to skip the tasmota-lite install and instead flash the custom compiled binary directly
 
 ### Compiling tasmota
->Below, I've linked to the docker-tasmota repository because it reduces the required software for compiling the firmware. If you'd prefer to compile using native tools, you can find the repository [here](https://github.com/arendst/tasmota)
+>Below, I've linked to the docker-tasmota repository because it reduces the required software for compiling the firmware. If you'd prefer to compile using native tools, you can find the repository [here](https://github.com/arendst/tasmota). Additionally, if you run into any problems during this step or just want more information, the [tasmota project site](https://tasmota.github.io/docs/) is enormously helpful.
 
 After we've cloned [the docker-tasmota repo](https://github.com/tasmota/docker-tasmota), we need to edit the file named `user_config_override.h` in the project root directory. In this file, we're going to define our wifi network information and pass some configuration options. The contents of the file should include _at least_ the following lines:
 
-```c
+```markdown
 #ifndef _USER_CONFIG_OVERRIDE_H_
 #define _USER_CONFIG_OVERRIDE_H_
 
@@ -74,7 +80,9 @@ After we've cloned [the docker-tasmota repo](https://github.com/tasmota/docker-t
 #endif
 ```
 
-We want to compile firmware with support for power monitoring sensors as well as our custom config, which can be done with the following command:
+By default, the docker-tasmota project compiles using the development branch of tasmota. If you'd prefer to use the stable branch, change the value of `USE_STABLE` to 1 in the `compile.sh` script.
+
+Compilation can be kicked off with the following command, which will output the binary to `Tasmota/build_output/firmware/tasmota-sensors.bin`
 ```bash
 ./compile.sh tasmota-sensors
 ```
@@ -89,16 +97,16 @@ There are several ways to flash this board, but I found the simplest to be using
 ![the tasmotizer user interface](tasmotizer.jpg)
 
 ### Flashing custom firmware
-The OTA firmware update should be relatively straight-forward. Start by connecting to the web UI using the IP address of the S31 (ex. `http://192.168.1.150/`). In the web UI, click `Firmware Upgrade`, upload the firmware binary we compiled earlier, and start the upgrade.
+For this step, we're essentially repeating the previous using the binary we compiled earlier. The only difference is, in the tasmotizer UI, select the `BIN file` radio button rather than `Release` and open the `tasmota-sensors.bin` file.
 
-Once the upgrade is finishing, we can finish off the configuration details in the web UI. From the main menu, select `Configuration`, `Configure Module`, and choose `Sonoff S31` from the dropdown.
+Once flashing is complete, power cycle the device and ensure that the S31 is connected to the wifi by selecting the `Get IP` button in tasmotizer. The last thing we need to do is finish off the configuration details and test the web UI. The web UI will be available at the IP address shown earlier. From the main menu, select `Configuration`, `Configure Module`, and choose `Sonoff S31` from the dropdown. Once complete, we're all set to desolder the connections and plug the S31 into the wall!
 
 ## Verify power monitoring
-Now that the plug is fully set up, we can verify that power monitoring is functioning properly by plugging it into the wall and connecting a lamp to it. Pulling up the web UI again, we can verify that sensor measurements are available at the top of the main page.
+With the plug fully set up, we can verify that power monitoring is functioning properly by plugging it into the wall and connecting a lamp to it. Pulling up the web UI again, we can verify that sensor measurements are available at the top of the main page. And we can check that prometheus metrics are running correctly using the `/metrics` endpoint.
 
 ![tasmota web UI with sensor measurements](tasmota-ui.jpg)
 
->Prometheus metric output can be verified at the `/metrics` endpoint at the same address used to access the web UI.
+>This screenshot was taken while a fridge was plugged into the S31, so if you're testing with a lamp, it's safe to expect lower values.
 
 ## Graphing power usage
 With the plug connected and metrics flowing, we can set up the S31 as a prometheus target and begin querying those power stats!
