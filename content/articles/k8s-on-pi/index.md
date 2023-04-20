@@ -26,7 +26,9 @@ Log into your first pi (we'll refer this as `node1`). The default user:pass is `
 
 If you do not have your pi connected to a monitor and keyboard or simply don't have physical access to it, add an empty file at /boot/ssh to the sd card before inserting it into the pi. [This will enable ssh on first boot](https://www.raspberrypi.com/news/a-security-update-for-raspbian-pixel/).
 
-![photo of the first few lines of terminal output after boot on the rapsberry pi](pi-terminal.webp)
+{{< image src="pi-terminal.webp" alt="first few lines of terminal output" >}}
+The easiest way to do this is by attaching a monitor and a keyboard to your pi
+{{< /image >}}
 
 A fun note about this command --
 > The raspi-config binary doesn't have an official non-interactive API, so this command may not work in the future. You can either use the interactive mode by omitting `nonint do_ssh 0` and using the GUI or by looking [at the source](https://github.com/raspberrypi-ui/rc_gui/blob/master/src/rc_gui.c) and updating the command. In case the link to source above is broken, you can also check [an archive of the page](https://web.archive.org/web/20200718051303/https://github.com/raspberrypi-ui/rc_gui/blob/master/src/rc_gui.c).
@@ -34,7 +36,9 @@ A fun note about this command --
 ### Get the setup script
 Run `wget https://raw.githubusercontent.com/subtlepseudonym/pi/master/setup/pi_raspbian.sh`, which will download a setup script that will set your hostname, create a non-default user, and install some useful packages.
 
-![gif of downloading the setup script](download-script.gif)
+{{< image src="download-script.gif" alt="gif of downloading the setup script" >}}
+This gif has been truncated to maintain readability
+{{< /image >}}
 
 > This script is fairly opinionated and will set up some basic directories and change your default shell. I recommend reading through the script before running it and tailoring it to your use case.
 
@@ -43,7 +47,9 @@ Add executable permissions to the setup script with `chmod +x setup.sh` and run 
 
 You will be prompted for a password and then you can go get a coffee, because it takes a few minutes to set things up. When the script is finished, your pi will reboot.
 
-![gif of running the setup script](run-setup.gif)
+{{< image src="run-setup.gif" alt="gif of running the setup script" >}}
+Notice the user@host change from the previous gif
+{{< /image >}}
 
 `ssh` into the pi and run the cleanup script via `sudo ./cleanup.sh`. This removes the default pi user and its home directory.
 

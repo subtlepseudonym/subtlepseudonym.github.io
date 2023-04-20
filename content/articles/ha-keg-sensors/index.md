@@ -66,11 +66,15 @@ Installing the raspberry pi and dht22 modules is as simple as sticking each to a
 
 Fitting a 1/4" barb into a 3/16" ID hose is easiest if you heat up the hose first. The most convenient method I've found is dipping the end of the hose into some hot water for 30 seconds or so. For a short while afterwards, the line is pliable enough that the 1/4" barb can be inserted without too much effort, forming a really tight seal. In my case, the seal was tight enough that I didn't need to use worm clamps.
 
-![flow meter with 1/4" barb fit into 3/16" ID hose](installed-flow-meter.jpg)
+{{< image src="installed-flow-meter.jpg" alt="flow meter with 1/4\" barb fit into 3/16\" ID hose" >}}
+In my case, the seal was tight enough that I didn't need to use worm clamps
+{{< /image >}}
 
-Adding with some packing tape to keep the wiring in place, we're all set!
+After adding some packing tape to keep the wiring in place, we're all set!
 
-![final wiring setup](final-wiring-setup.jpg)
+{{< image src="final-wiring-setup.jpg" alt="final wiring setup" >}}
+Re-enacting the climax of Event Horizon in my fridge
+{{< /image >}}
 
 ## Updating the software
 The sensor-test code is great for making sure the sensors work, but leaves a lot to be desired in terms of actually monitoring the kegerator. I run [prometheus](https://prometheus.io/) and [grafana](https://grafana.com/) instances on my network, so the simplest way to get state information from the raspberry pi into a human-readable form is by publishing prometheus metrics and setting up a grafana dashboard to display them. Along with some concerns around tuning flow constants and refilling kegs without restarting the program, I assembled a short list of design goals:

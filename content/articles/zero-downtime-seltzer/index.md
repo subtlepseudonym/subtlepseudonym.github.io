@@ -32,13 +32,17 @@ In this article, we'll cover adding that second gas line as well as cutting a ut
 
 > A quick note about the grommet sizes: They're sized according to their outer diameter rather than the outer diameter of the hole they're intended to fit. For these particular parts, the rubber rim is roughly 1/8" thick (contributing 1/4" to the diameter), therefore fitting a 7/8" hole.
 
-![edgestar kc2000 dual-tap kegerator](edgestar-kc2000.webp)
+{{< image src="edgestar-kc2000.webp" alt="edgestar kc2000 dual-tap kegerator" >}}
+An EdgeStar KC2000 dual-tap kegerator
+{{< /image >}}
 
 ### Drilling the first hole
 
 Ostensibly, drilling holes is pretty easy. The catch is that refrigerators tend to be full of wiring and coolant, of which the latter is flammable, so we'll need to be careful.
 
-![rear of the kegerator, showing the existing hole](existing-gas-line.webp)
+{{< image src="existing-gas-line.webp" alt="rear of the kegerator, showing the existing hole" >}}
+We'll be drilling just below the existing hole
+{{< /image >}}
 
 Inside the fridge, the cold plate has a pill-shaped cutout where the existing gas line feeds through the rear wall. The cutout is much larger than the existing hole and certainly _looks_ like it's been designed to support expansion. [A few folks on the internet](https://www.homebrewtalk.com/threads/adding-a-second-gas-line-to-a-edgestar-kc2000twin.347217/) have had success with adding new holes too. With those factors in mind, I decided to carefully drill out the inside wall.
 
@@ -56,12 +60,15 @@ I then returned to the rear panel to make the second cut from the outside. The m
 
 With the new gas line ready to go, it's time to drill a "utility" hole to power the sensors that we'll install later. The AC adapter I've got has a 5/8" [RF choke](https://en.wikipedia.org/wiki/Ferrite_bead) that we'll have to feed through the hole, so it'll need to be at least that wide.
 
-![interior of the fridge, a small piece of plastic is partially covering the second hole](interior-second-cut.webp)
+{{< image src="interior-second-cut.webp" alt="interior of the fridge, a small piece of plastic is partially covering the second hole" >}}
+There's some plastic partially covering the utility hold
+{{< /image >}}
 
 Unfortunately, drilling the second hole did not go as smoothly as the first. Upon cutting through the inner wall, I encountered some soft black plastic that I worried could be some wiring. Using a pocket knife, I pared it down a small amount at a time, intending to seal it back up should I find wiring, but found it to be one solid chunk. Satisfied, I bored the rest of the way through and finished up the utility hole.
 
-![rear of the kegerator, grommets are installed on the two new holes](rear-installed-grommets.webp)
+{{< image src="rear-installed-grommets.webp" alt="rear of the kegerator, grommets are installed on the two new holes" >}}
 I removed the plastic liner from the original hole because it was too wide to accomodate the utility hole grommet.
+{{< /image >}}
 
 Now all that's left to do is run the lines, put the sensors in place, and find something to plug the gap between the 1/8" power cable the 1/2" hole it runs through.
 

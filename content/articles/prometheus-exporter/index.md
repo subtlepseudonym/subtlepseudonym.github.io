@@ -27,7 +27,9 @@ Similarly, the total queries by percent blocked and total queries by client, pic
 >
 > There are additional query parameter options [documented here](https://discourse.pi-hole.net/t/pi-hole-api/1863)
 
-![screenshot of the pihole dashboard](pihole-dashboard.webp)
+{{< image src="pihole-dashboard.webp" alt="screenshot of the pihole dashboard" >}}
+Most days, ~20% of my traffic is ads
+{{< /image >}}
 
 ### Straight to the source!
 
