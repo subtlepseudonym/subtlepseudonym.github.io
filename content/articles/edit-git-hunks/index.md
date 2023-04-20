@@ -3,6 +3,10 @@ date: 2019-10-19
 title: "Editing Git Hunks for Fun and Profit"
 draft: false
 ---
+{{< image src="angry-annoyed-coffee.jpg" alt="header image" >}}
+Taken by [Tim Gouw](https://www.pexels.com/@punttim)
+{{< /image >}}
+
 If your development process is anything like mine, you tend to make lots of changes and worry about organizing the commits afterwards. This can lead to some frustration in separating the changes into neat, logical increments.
 
 ### Add changes by patch

@@ -4,6 +4,8 @@ title: Kubernetes on Raspberry Pi
 draft: false
 ---
 
+![header image](containers.jfif)
+
 If you have a few raspberry pis lying around and you're looking for an interesting way to get started with kubernetes, this is the tutorial for you! Below, I've outlined a fairly straight forward method for getting a stripped down install of kubernetes (k3s) installed across a pair of raspberry pis.
 
 > While I was working on this project, I realized that one of my pis was corrupting sd cards. It took me a while to realize that the pi itself was the culprit, so I ended up spending quite a bit of time flashing new raspbian images and getting fresh installs set up with some basic tools. I wrote a script to do most of the work, so this will be a relatively quick tutorial with a minimum of non-kubernetes related setup tasks.

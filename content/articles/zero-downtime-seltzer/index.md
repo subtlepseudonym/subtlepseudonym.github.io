@@ -6,6 +6,10 @@ draft: false
 ---
 I was recently gifted a dual pressure gas regulator, so it's time to upgrade my kegerator.
 
+{{< image src="hot-springs.jpg" alt="header image" >}}
+Taken by [Veronika Bykovich](https://veronikabykovich.com/)
+{{< /image >}}
+
 For this project, I have a pair of upgrades in mind:
 - Add a second gas line to make use of the new regulator
 - Install some sensors to monitor how much liquid is left in each keg

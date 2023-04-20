@@ -3,6 +3,8 @@ date: 2019-07-15
 title: "Pihole on Kubernetes"
 draft: false
 ---
+![header image](black_hole.jpg)
+
 If you've never heard of [pi-hole](https://pi-hole.net/), it's fantastic tool that blocks DNS requests to ad servers. That means you can surf the web without having to look at ads on every page.
 
 I'm a big fan of running absolutely everything in docker, so I previously had a pi-hole container on my network, but it's time to up my game.
