@@ -9,7 +9,7 @@ draft: false
 
 ---
 
-I run both a server and a small cluster of raspberry pis at home, in addition to some networking equipment. This (probably) represents a significant amount of my power usage. The problem is, I know these things tend to be power-hungry, but I don't know _exactly how much_ power they're really drawing. To remedy this, I spent some time working with IoT plugs, prometheus, and grafana to set up real-time power monitoring.
+At home, I run a server rack and a hefty desktop computer, not to mention [a kegerator](https://subtlepseudonym/series/seltzer). This likely represents a significant amount of my power usage. The problem is, that's a guess; I don't actually know how much power they're drawing. To remedy this, I spent some time working with IoT plugs, prometheus, and grafana to set up real-time power monitoring.
 
 {{< image src="windmills.jpg" alt="header image" >}}
 Taken by [Laura Penwell](https://www.pexels.com/@laura-penwell-309923/)
@@ -21,7 +21,7 @@ Taken by [Laura Penwell](https://www.pexels.com/@laura-penwell-309923/)
 - [jumper wires](https://www.amazon.com/EDGELEC-cables-alambre-Dupont-colores/dp/B07GD2BWPY) (you can't have too many of these)
 - [soldering iron](https://www.amazon.com/Liouhoum-Auto-Sleep-Adjustable-Temperature-Thermostatic/dp/B08PZBPXLZ) and [solder sucker](https://www.amazon.com/Teenitor-Solder-Sucker-Desoldering-Removal/dp/B0739LXQ6N)
 
-That list puts the cost of this project around $35-60 depending upon whether you already have access to a soldering kit. I also used a stand with a magnifying glass and alligator clips [like this](https://www.amazon.com/Double-Third-Clamp-Alligator-Magnifying/dp/B006ZBJU04) to make holding wires together a bit easier.
+That list puts the cost of this project around $35-60 depending upon whether you already have access to a soldering kit. I also used a stand with alligator clips [like this](https://www.amazon.com/Double-Third-Clamp-Alligator-Magnifying/dp/B006ZBJU04) to make holding wires together a bit easier.
 
 ## Opening the S31
 We need to access the serial contacts on the S31. To do that, we need to take it apart. For this step, I found [this tutorial](http://www.phreakmonkey.com/2018/01/sonoff-s31-disassemble-and-flash.html) extremely useful. On my device, the screws were made of very soft metal and stripped quite easily. You may want to have a [screw extractor](https://www.lowes.com/n/how-to/remove-a-stripped-or-broken-screw) drill bit on hand. I've paraphrased the disassembly steps below:
