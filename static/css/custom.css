@@ -55,6 +55,10 @@
 	overflow-x: hidden;
 }
 
+.entries li {
+	flex-wrap: wrap;
+}
+
 img {
 	display: block;
 	margin-left: auto;
