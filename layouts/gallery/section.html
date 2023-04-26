@@ -61,7 +61,7 @@
 
 <div id="bird-gallery" class="pswp-gallery">
 	{{ partial "post/info.html" . }}
-		{{ range (.Paginator 10).Pages.ByWeight }}
+		{{ range (.Paginator 20).Pages.ByWeight }}
 			<a
 				class="pswp-gallery__item"
 				href="{{ .Params.image }}"
