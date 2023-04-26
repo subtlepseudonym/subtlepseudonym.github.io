@@ -3,12 +3,6 @@ date: 2023-04-18T15:32:43-04:00
 title: "Power Monitoring with Tasmota"
 draft: false
 ---
----
-
-[ DRAFT ]
-
----
-
 At home, I run a server rack and a hefty desktop computer, not to mention [a kegerator](https://subtlepseudonym.com/series/seltzer). This likely represents a significant amount of my power usage. The problem is, that's a guess; I don't actually know how much power they're drawing. To remedy this, I spent some time working with IoT plugs, prometheus, and grafana to set up real-time power monitoring.
 
 {{< image src="windmills.jpg" alt="header image" >}}
@@ -112,7 +106,7 @@ With the plug fully set up, we can verify that power monitoring is functioning p
 
 ![tasmota web UI with sensor measurements](tasmota-ui.jpg)
 
->This screenshot was taken while a fridge was plugged into the S31, so if you're testing with a lamp, it's safe to expect lower values.
+>This screenshot was taken while a fridge was plugged into the S31, so if you're testing with a lamp it's safe to expect lower values.
 
 ## Graphing power usage
 With the plug connected and metrics flowing, we can set up the S31 as a prometheus target and begin querying those power stats!
