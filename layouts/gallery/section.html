@@ -61,7 +61,7 @@
 
 <div id="bird-gallery--cropped-thumbs" class="pswp-gallery">
 	{{ partial "post/info.html" . }}
-		{{ range .Paginator.Pages.ByWeight }}
+		{{ range (.Paginator 10).Pages.ByWeight }}
 			<a
 				class="pswp-gallery__item"
 				href="{{ .Params.image }}"
