@@ -4,15 +4,17 @@ title: "Zero Downtime Seltzer"
 series: "Seltzer"
 draft: false
 ---
-I was recently gifted a dual pressure gas regulator, so it's time to upgrade my kegerator.
-
 {{< image src="hot-springs.jpg" alt="header image" >}}
 Taken by [Veronika Bykovich](https://veronikabykovich.com/)
 {{< /image >}}
 
+<!-- summary -->
+I was recently gifted a dual pressure gas regulator, so it's time to upgrade my kegerator.
+
 For this project, I have a pair of upgrades in mind:
 - Add a second gas line to make use of the new regulator
 - Install some sensors to monitor how much liquid is left in each keg
+<!-- summary -->
 
 Strictly speaking, neither of these things are actually required to achieve high-availability seltzer, but belie some broader goals. I'd like to occasionally serve beer alongside the usual seltzer, which should be served at a different pressure, and I'd like to know how much is remaining in either keg (without opening the door and judging heft).
 

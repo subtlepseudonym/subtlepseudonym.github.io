@@ -7,7 +7,9 @@ draft: false
 Taken by [Tim Gouw](https://www.pexels.com/@punttim)
 {{< /image >}}
 
-If your development process is anything like mine, you tend to make lots of changes and worry about organizing the commits afterwards. This can lead to some frustration in separating the changes into neat, logical increments.
+<!-- summary -->
+If your development process is anything like mine, you tend to make lots of changes and worry about organizing the commits afterwards. This can lead to some frustration in separating the changes into neat, logical increments. Adding commits on a per-hunk basis can help.
+<!-- summary -->
 
 ### Add changes by patch
 

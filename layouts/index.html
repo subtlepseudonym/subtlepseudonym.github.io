@@ -4,12 +4,15 @@
   {{ range $pag.Pages }}
     <article class="post">
         {{ partial "post/info.html" . }}
-        {{ .Summary }}
-        {{ if .Truncated }}
+        {{ $spl := split .RawContent "<!-- summary -->" }}
+        {{ if eq (len $spl) 3 }}
+          {{ index $spl 1 | markdownify }}
+        {{ else }}
+          {{ .Summary }}
+        {{ end }}
         <div class="read-more-link">
             <a href="{{ .RelPermalink }}">Read More…</a>
         </div>
-        {{ end }}
     </article>
     {{- end }}
 </div>

@@ -8,7 +8,9 @@ Taken by [Kenny Luo](https://web.archive.org/web/20220819181420/http://kennyluo.
 {{< /image >}}
 
 ### First, some introduction
-Pihole is a self-hosted DNS server and filter for blocking ad domains. I run pihole on my network and have found it to be great fodder for testing devops / SRE concepts. Previously, I took a stab at [running pihole on kubernetes](/articles/pihole-on-k8s). Since then, I've started running [prometheus](https://prometheus.io/) and [grafana](https://grafana.com/) to collect and display metrics. What better way to play with those platforms than with metrics from pihole!
+<!-- summary -->
+Pihole is a self-hosted DNS forwarder and filter for blocking ad domains. I run pihole on my network and have found it to be great fodder for testing devops / SRE concepts. Previously, I took a stab at [running pihole on kubernetes](/articles/pihole-on-k8s). Since then, I've started running [prometheus](https://prometheus.io/) and [grafana](https://grafana.com/) to collect and display metrics. What better way to play with those platforms than with metrics from pihole!
+<!-- summary -->
 
 This isn't a recipe blog, so if you care more about the code than my motivations, you can find it here: [subtlepseudonym/pihole-exporter](https://github.com/subtlepseudonym/pihole-exporter)
 

@@ -5,9 +5,11 @@ draft: false
 ---
 ![header image](black_hole.jpg)
 
-If you've never heard of [pi-hole](https://pi-hole.net/), it's fantastic tool that blocks DNS requests to ad servers. That means you can surf the web without having to look at ads on every page.
+<!-- summary -->
+If you've never heard of [pi-hole](https://pi-hole.net/), it's a fantastic tool that blocks DNS requests to ad servers. That means you can surf the web without having to look at ads on every page.
 
 I'm a big fan of running absolutely everything in docker, so I previously had a pi-hole container on my network, but it's time to up my game.
+<!-- summary -->
 
 ### Before we begin
 For the purposes of this tutorial, I'm going to assume that you've assigned your Raspberry Pi a static IP address and know how to route DNS requests to it. If you've read my previous post on [setting up a kubernetes cluster on Raspberry Pis](/articles/k8s-on-pi), you'll be able to follow along as I get pi-hole running in kubernetes.

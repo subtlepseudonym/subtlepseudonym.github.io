@@ -3,7 +3,10 @@ date: 2023-04-18T15:32:43-04:00
 title: "Power Monitoring with Tasmota"
 draft: false
 ---
+
+<!-- summary -->
 At home, I run a server rack and a hefty desktop computer, not to mention [a kegerator](https://subtlepseudonym.com/series/seltzer). This likely represents a significant amount of my power usage. The problem is, that's a guess; I don't actually know how much power they're drawing. To remedy this, I spent some time working with IoT plugs, prometheus, and grafana to set up real-time power monitoring.
+<!-- summary -->
 
 {{< image src="windmills.jpg" alt="header image" >}}
 Taken by [Laura Penwell](https://www.pexels.com/@laura-penwell-309923/)
