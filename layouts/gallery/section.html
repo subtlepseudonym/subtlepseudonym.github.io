@@ -61,26 +61,26 @@
 
 <div id="bird-gallery" class="pswp-gallery">
 	{{ partial "post/info.html" . }}
-		{{ range (.Paginator 20).Pages.ByWeight }}
-			<a
-				class="pswp-gallery__item"
-				href="{{ .Params.image }}"
-				data-pswp-width="{{ .Params.width }}"
-				data-pswp-height="{{ .Params.height }}"
-				data-cropped="true"
-				target="_blank"
-			>
-				<img
-					class="lightbox"
-					src="{{- delimit (split .Params.image ".") "-thumb." -}}"
-					alt="{{ .Params.description }}"
-				/>
-				<div class="lightbox-badge">
-					{{- title (delimit (split (index (split .Params.image "/") 0) "-") " ") -}}
-				</div>
-			</a>
-			<span class="pswp-caption-content">{{ .Params.description }}</span>
-		{{ end }}
+  {{ range (.Paginator 20).Pages.ByWeight }}
+    <a
+      class="pswp-gallery__item"
+      href="{{ .Params.image }}"
+      data-pswp-width="{{ .Params.width }}"
+      data-pswp-height="{{ .Params.height }}"
+      data-cropped="true"
+      target="_blank"
+    >
+      <img
+        class="lightbox"
+        src="{{- delimit (split .Params.image ".") "-thumb." -}}"
+        alt="{{ .Params.description }}"
+      />
+      <div class="lightbox-badge">
+        {{- title (delimit (split (index (split .Params.image "/") 0) "-") " ") -}}
+      </div>
+    </a>
+    <span class="pswp-caption-content">{{ .Params.description }}</span>
+  {{ end }}
 	{{ partial "post/navigation.html" . }}
 </div>
 {{ partial "pagination.html" . }}
