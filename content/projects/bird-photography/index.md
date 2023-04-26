@@ -14,6 +14,11 @@ draft: false
 	  childSelector: '.pswp-gallery__item',
 	  escKey: true,
 	  arrowKeys: true,
+	  initialZoomLevel: 'fit',
+	  secondaryZoomLevel: 'fit',
+	  maxZoomLevel: 'fit',
+	  imageClickAction: 'close',
+	  tapAction: 'close',
 	  pswpModule: () => import('/js/photoswipe.esm.min.js')
 	});
 
