@@ -22,15 +22,17 @@
         </ul>
     </p>
     {{ else }}
-	    {{ if .PrevPage }}
-            {{ if eq .PrevPage.Section "articles" }}
-	            <a class="previous-post" href="{{ .PrevPage.Permalink }}?ref=footer">« {{ .PrevPage.Title | truncate 50 "..."}}</a>
-	        {{ end }}
+      {{ if eq .Section "articles" }}
+        {{ if .PrevPage }}
+          {{ if eq .PrevPage.Section "articles" }}
+            <a class="previous-post" href="{{ .PrevPage.Permalink }}?ref=footer">« {{ .PrevPage.Title | truncate 50 "..."}}</a>
+          {{ end }}
+          {{ end }}
+        {{ if .NextPage }}
+          {{ if eq .NextPage.Section "articles" }}
+            <a class="next-post" href="{{ .NextPage.Permalink }}?ref=footer">{{ .NextPage.Title | truncate 50 "..." }} »</a>
+          {{ end }}
         {{ end }}
-	    {{ if .NextPage }}
-            {{ if eq .NextPage.Section "articles" }}
-	            <a class="next-post" href="{{ .NextPage.Permalink }}?ref=footer">{{ .NextPage.Title | truncate 50 "..." }} »</a>
-	        {{ end }}
-        {{ end }}
+      {{ end }}
     {{ end }}
 </div>
