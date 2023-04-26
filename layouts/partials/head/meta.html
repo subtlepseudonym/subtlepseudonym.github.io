@@ -104,7 +104,7 @@
 <!-- To make sure this renders only in the article page, we check the section -->
 {{ if eq .Section "articles" }}
 <!-- Pagination meta tags for list pages only -->
-{{ $paginator := .Paginate (where .Pages "Type" "posts") }} 
+{{ $paginator := .Paginate (where .Pages "Type" "articles") }}
 {{ if $paginator }}
   <link rel="first" href="{{ $paginator.First.URL }}" />
   <link rel="last" href="{{ $paginator.Last.URL }}" />
