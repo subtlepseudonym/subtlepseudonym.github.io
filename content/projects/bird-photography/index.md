@@ -86,5 +86,10 @@ draft: false
 	A tricolored heron standing on the roots of a mangrove tree
 	<br/> f/4.8, 1/400, 100mm, iso800
 {{% /lightbox %}}
+
+{{% lightbox src="osprey/20230413-2.jpg" width="6000" height="4000" %}}
+	An osprey soaring against a cloudy background
+	<br/> f/16, 1/500, 210mm, iso400
+{{% /lightbox %}}
 </div>
 {{< /rawhtml >}}
