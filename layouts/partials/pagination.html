@@ -1,4 +1,4 @@
-{{ $pag := .Paginate (where .Pages "Type" "articles") }}
+{{ $pag := .Paginate .Pages }}
 {{ if gt $pag.TotalPages 1 }}
 <hr>
 <div class="footer">
