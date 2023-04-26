@@ -59,6 +59,10 @@
 	flex-wrap: wrap;
 }
 
+.sidebar-nav .heading-mobile {
+	margin-right: 0.4em;
+}
+
 img {
 	display: block;
 	margin-left: auto;
