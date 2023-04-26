@@ -9,16 +9,12 @@ Taken by [Veronika Bykovich](https://veronikabykovich.com/)
 {{< /image >}}
 
 <!-- summary -->
-I was recently gifted a dual pressure gas regulator, so it's time to upgrade my kegerator.
+I was recently gifted a dual pressure gas regulator, so it's time to upgrade my kegerator. For this project, I have a pair of upgrades in mind: add a second gas line to make use of the new regulator and install some sensors to monitor how much liquid is left in each keg.
 
-For this project, I have a pair of upgrades in mind:
-- Add a second gas line to make use of the new regulator
-- Install some sensors to monitor how much liquid is left in each keg
+In this article, we'll cover adding a second gas line as well as cutting a utility hole for powering the sensors. A [following article](/articles/ha-keg-sensors) will cover installing the sensors and monitoring keg state.
 <!-- summary -->
 
-Strictly speaking, neither of these things are actually required to achieve high-availability seltzer, but belie some broader goals. I'd like to occasionally serve beer alongside the usual seltzer, which should be served at a different pressure, and I'd like to know how much is remaining in either keg (without opening the door and judging heft).
-
-In this article, we'll cover adding that second gas line as well as cutting a utility hole for powering the sensors. A following article will cover installing the sensors and monitoring keg state.
+> Despite the article's title, this work isn't _required_ to achieve high-availability seltzer. Although, it is required if I'd like to serve beer alongside the usual seltzer or know how much is left in either keg without opening the door.
 
 ### The Hardware
 
