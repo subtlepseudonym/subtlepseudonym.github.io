@@ -25,17 +25,17 @@ We need to access the serial contacts on the S31. To do that, we need to take it
 
 1. Remove the darker plastic panel with the power button. It should come off easily if you pry at it carefully.
 2. Slide out the plastic rails on the top and bottom corners, on the side with the male plug.
-3. Unscrew the three screws that were conceled by the plastic rails.
+3. Unscrew the three screws that were concealed by the plastic rails.
 4. The two parts of the case should now separate easily.
 
 ![a disassembled S31](disassembled.jpg)
 
 ## Attach the serial connection
->*Note*: Be absolutely certain that the S31 *is not* plugged in or powered in any way. The ground pin is connected to the live AC wire and it will electrocute you or fry your computer if it's plugged into the wall.
+>**Note**: Be absolutely certain that the S31 *is not* plugged in or powered in any way. The ground pin is connected to the live AC wire and it will electrocute you or fry your computer if it's plugged into the wall.
 
 Next, solder the jumper wires to the S31. The contacts we care about are labelled *vcc* (3v3 power), *rx* (receive), *tx* (transmit), and *gnd* (ground).
 
-The S31 has two sets of rx-tx contacts. The pair closer to *gnd* isn't connected to anything. Solder the jumper wires to the rx-tx pair closer to *vcc*. If you're having trouble heating the ground contact, try carefully increasing the heat on your soldering iron or using a tip with more surface area.
+The S31 has two sets of _rx-tx_ contacts. The pair closer to *gnd* isn't connected to anything. Solder the jumper wires to the _rx-tx_ pair closer to *vcc*. If you're having trouble heating the ground contact, try carefully increasing the heat on your soldering iron or using a tip with more surface area.
 
 Let everything cool off, then attach the jumper wires to the usb-to-ttl adapter. Using the adapter linked in the first section, connect the labelled contacts as follows (formatted as `S31 to adapter`):
 - vcc to 3v3
@@ -54,14 +54,14 @@ We'll be flashing the plug with [tasmota](https://tasmota.github.io/docs/), whic
 2. Flash the S31 with the tasmota-lite release
 3. Perform an OTA firmware update to the binary we compiled
 
->Note: The tasmota project has been in active development since the writing of this article, so you may be able to skip the tasmota-lite install and instead flash the custom compiled binary directly
+>The tasmota project has been in active development since the writing of this article, so you may be able to skip the tasmota-lite install and instead flash the custom compiled binary directly
 
 ### Compiling tasmota
 >Below, I've linked to the docker-tasmota repository because it reduces the required software for compiling the firmware. If you'd prefer to compile using native tools, you can find the repository [here](https://github.com/arendst/tasmota). Additionally, if you run into any problems during this step or just want more information, the [tasmota project site](https://tasmota.github.io/docs/) is enormously helpful.
 
 After we've cloned [the docker-tasmota repo](https://github.com/tasmota/docker-tasmota), we need to edit the file named `user_config_override.h` in the project root directory. In this file, we're going to define our wifi network information and pass some configuration options. The contents of the file should include _at least_ the following lines:
 
-```markdown
+```plaintext
 #ifndef _USER_CONFIG_OVERRIDE_H_
 #define _USER_CONFIG_OVERRIDE_H_
 
@@ -96,7 +96,7 @@ First, hold down the small button that can be found next to the GPIO contacts yo
 There are several ways to flash this board, but I found the simplest to be using [tasmotizer](https://github.com/tasmota/tasmotizer). Check the `Release` radio button and choose `tasmota-lite.bin` from the dropdown. Ensure that `Erase before flashing` is true and we're ready to flash!
 
 {{< image src="tasmotizer.jpg" alt="the tasmotizer user interface" >}}
-A smaller binary is available as tasmota-minimal on [the downloads page](http://ota.tasmota.com/tasmota/release/)
+An even smaller binary is available as tasmota-minimal on [the downloads page](http://ota.tasmota.com/tasmota/release/)
 {{< /image >}}
 
 ### Flashing custom firmware
