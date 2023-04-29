@@ -23,7 +23,6 @@ page_filename="$(gawk 'match($0, /(.*)\.(.*)$/, a) { print a[1] ".md" }' <<< ${i
 target_dir="content/projects/bird-photography/${bird_dir}"
 mkdir -p "${target_dir}"
 cp "$1" "${target_dir}/${image_filename}"
-exiftool -all= "${target_dir}/${image_filename}" # strip exif metadata
 ffmpeg -i "${target_dir}/${image_filename}" -vf scale=840:-1 "${target_dir}/${thumb_filename}" 2> /dev/null
 
 printf "weight: "
