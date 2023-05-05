@@ -25,6 +25,9 @@
 							{{ if eq (lower .Title) (lower (strings.TrimSuffix "/" (strings.TrimPrefix "/" $menu_item.URL))) }}
 								<li class="heading heading-mobile">
 									<a href="{{$menu_item.URL }}">{{ $menu_item.Name }}</a>
+                  {{ if ne $menu_item.Name "About" }}
+                    &centerdot;
+                  {{ end }}
 								</li>
 							{{ end }}
 						{{ end }}
