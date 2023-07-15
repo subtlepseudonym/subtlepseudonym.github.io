@@ -12,7 +12,7 @@ settings="$(
 )"
 
 width="$(exiftool -s3 -ImageWidth "$1")"
-height="$(exiftool -s3 -Imageheight "$1")"
+height="$(exiftool -s3 -ImageHeight "$1")"
 
 target_path="$(basename "$1" | gawk 'gsub(/_/, "-", $0) match($0, /(.*)-([0-9]{8}-[0-9]+\..*)/, a) { print a[1] "/" a[2] }')"
 bird_dir="$(dirname ${target_path})"
