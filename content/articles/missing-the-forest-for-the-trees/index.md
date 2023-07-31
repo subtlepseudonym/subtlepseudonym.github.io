@@ -8,7 +8,7 @@ _build:
 ---
 #### Or, Yet Another Discussion of Technical Interview Methodology
 <!-- summary -->
-The way we, as an industry, interview prospective individual contributors is exhausting and ineffective. Assuming, of course, that the goal is to hire engineers who can design and implement simple, maintainable software. This is a well-discussed topic, so we're unlikely to be treading new ground here, but hopefully this article will contribute some novel metaphors or approaches to the discussion.
+The way we, as an industry, interview prospective individual contributors is exhausting and ineffective. The goal of these interviews is to hire engineers who can design and implement simple, maintainable software, so why are we asking them contrived questions about dynamic programming?
 <!-- summary -->
 
 {{< image src="screw-bits.jpg" alt="header image" >}}
@@ -16,9 +16,9 @@ Taken by [Mika Baumeister](https://unsplash.com/@mbaumi)
 {{< /image >}}
 
 ## Contrasting methodologies
-Building software is all about solving problems. So, to determine an interviewee's fitness, it makes sense to have them solve problems. In my experience, the two most common ways to do this are asking candidates to implement an algorithm or discuss system design. The former gets the candidate writing code and provides the interviewer with a strong signal based upon how well the solution performs. The latter is less precise and asks the candidate to describe a solution to a broadly defined issue and discuss the tradeoffs involved.
+Building software is all about solving problems. So, to determine an interviewee's fitness, it makes sense to have them solve problems. In my experience, the two most common ways to do this are asking candidates to implement an algorithm or discuss system design. The former gets the candidate writing code and provides the interviewer with a strong signal based upon how well the solution performs. The latter is less structured, asking the candidate to describe a solution to a broadly defined issue and discuss the tradeoffs involved.
 
-Real-world interview processes tend to lie somewhere on a continuum between these archetypes. The distribution is not uniform though, as many companies hew towards algorithmic problems, specifically for the high-precision signal it provides. This is a categorical error.
+Real-world interview processes tend to lie somewhere on a continuum between these archetypes. The distribution is not uniform though, as many companies hew towards algorithmic problems, specifically for the high-precision signal it provides. This is a category error.
 
 ## Precision vs accuracy
 <!-- draft stuff
@@ -50,7 +50,7 @@ As an industry, we strive to become data-driven organizations. This is an admira
 - you want to hire folks fresh from college; they've been doing algo problems
 -->
 
-There's nothing inherently wrong with using algothrimic problems for technical interviews. When that category of problems matches the role, they're a fantastic tool. In such a case, algorithmic interview questions have _both_ precision and accuracy.
+There's nothing inherently wrong with using algothrimic problems for technical interviews. When that category of problems matches the role the interview is hiring for, they're a fantastic tool. In such a case, algorithmic interview questions have _both_ precision and accuracy.
 
 ### Some meta-discussion
 [draft]
