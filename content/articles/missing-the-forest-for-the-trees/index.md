@@ -6,6 +6,7 @@ _build:
   render: true
   list: false
 ---
+[draft]
 #### Or, Yet Another Discussion of Technical Interview Methodology
 <!-- summary -->
 The way we, as an industry, interview prospective individual contributors is exhausting and ineffective. The goal of these interviews is to hire engineers who can design and implement simple, maintainable software, so why are we asking them contrived questions about dynamic programming?
@@ -21,16 +22,6 @@ Building software is all about solving problems. So, to determine an interviewee
 Real-world interview processes tend to lie somewhere on a continuum between these archetypes. The distribution is not uniform though, as many companies hew towards algorithmic problems, specifically for the high-precision signal it provides. This is a category error.
 
 ## Precision vs accuracy
-<!-- draft stuff
-	- "high-signal" is provides precision due to rubric backing
-	- high precision is great, but not at the expense of accuracy
-		- define precision / accuracy
-		- precision is how closely we can tell an eng conforms to the criteria we're testing for
-		- accuracy is how closely the criteria we're testing for conforms to the job we're hiring for
-	- very few engineers are actually solving algo problems in their day-to-day
-	- list of things engineers generally care about / are responsible for
-	- pivot into why systems design matches this list of items better than algo
--->
 Precision is a great quality to have, but it's meaningless without accuracy. Imagine a thermometer that displays the temperature out to four decimal places, but it's incorrect by up to twenty degrees in either direction. That thermometer has great precision! And it's useless for taking the temperature.
 
 Algorithmic programming problems are high-precision interview tools. They provide a specific performance score that be can mapped directly to a pass / fail decision. This makes the interviewer's job relatively easy and makes comparing candidates similarly straight-forward; both important qualities when senior engineers are running the interviews and there's a glut of prospects. Focusing on these advantages, however, misses the point. This high degree of precision isn't valuable because the method isn't _accurate_.
@@ -45,11 +36,6 @@ As an industry, we strive to become data-driven organizations. This is an admira
 
 
 ### Algorithmic testing _can_ be useful!
-<!-- draft stuff
-- when you do need engineers to solve algo problems
-- you want to hire folks fresh from college; they've been doing algo problems
--->
-
 There's nothing inherently wrong with using algothrimic problems for technical interviews. When that category of problems matches the role the interview is hiring for, they're a fantastic tool. In such a case, algorithmic interview questions have _both_ precision and accuracy.
 
 ### Some meta-discussion
@@ -57,3 +43,4 @@ There's nothing inherently wrong with using algothrimic problems for technical i
 - This topic has been discussed _a lot_. Why so little organizational change?
 	- org change / fighting inertia is difficult and takes time (weak, but always plausible)
 	- orgs value precision over accuracy because it shows that they're _doing something_ and doing it deliberately, regardless of whether it furthers their goals
+	- Is this stuff necessary for this article? Follow-up article?
