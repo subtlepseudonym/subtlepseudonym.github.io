@@ -1,7 +1,7 @@
 ---
 date: 2023-07-27T13:06:12-04:00
 title: "Missing the Forest for the Trees"
-draft: true
+draft: false
 _build:
   render: true
   list: false
