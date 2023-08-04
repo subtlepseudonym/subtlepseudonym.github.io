@@ -7,7 +7,7 @@ _build:
   list: false
 ---
 [draft]
-#### Or, Yet Another Discussion of Technical Interview Methodology
+#### Or, Yet Another Discussion of Tech Company Interview Methodology
 <!-- summary -->
 The way we, as an industry, interview prospective individual contributors is exhausting and ineffective. The goal of these interviews is to hire engineers who can design and implement simple, maintainable software, so why are we asking them contrived questions about dynamic programming?
 <!-- summary -->
@@ -17,30 +17,31 @@ Taken by [Mika Baumeister](https://unsplash.com/@mbaumi)
 {{< /image >}}
 
 ## Contrasting methodologies
-Building software is all about solving problems. So, to determine an interviewee's fitness, it makes sense to have them solve problems. In my experience, the two most common ways to do this are asking candidates to implement an algorithm or discuss system design. The former gets the candidate writing code and provides the interviewer with a strong signal based upon how well the solution performs. The latter is less structured, asking the candidate to describe a solution to a broadly defined issue and discuss the tradeoffs involved.
+Building software is all about solving problems. So, to determine an interviewee's fitness, it makes sense to have them solve problems. In my experience, the two most common ways to do this are asking candidates to implement an algorithm or discuss system design. The former gets the candidate writing code and provides the interviewer with a quantifiable performance socre. The latter is less structured, asking the candidate to describe a solution to a broadly defined issue and discuss the tradeoffs involved.
 
-Real-world interview processes tend to lie somewhere on a continuum between these archetypes. The distribution is not uniform though, as many companies hew towards algorithmic problems, specifically for the high-precision signal it provides. This is a category error.
+Real-world interview processes lie on a continuum between these archetypes and few adhere strictly to either end. The distribution along that continuum is not uniform though: many companies skew towards algorithmic problems, often strongly, for the quantifiable metrics it provides. This is a category error.
 
 ## Precision vs accuracy
 Precision is a great quality to have, but it's meaningless without accuracy. Imagine a thermometer that displays the temperature out to four decimal places, but it's incorrect by up to twenty degrees in either direction. That thermometer has great precision! And it's useless for taking the temperature.
 
-Algorithmic programming problems are high-precision interview tools. They provide a specific performance score that be can mapped directly to a pass / fail decision. This makes the interviewer's job relatively easy and makes comparing candidates similarly straight-forward; both important qualities when senior engineers are running the interviews and there's a glut of prospects. Focusing on these advantages, however, misses the point. This high degree of precision isn't valuable because the method isn't _accurate_.
+Algorithmic programming problems are high-precision interview tools. They provide lots of measurable performance metrics that be can mapped directly to a pass / fail decision. This makes the interviewer's job relatively easy and makes comparing candidates straight-forward. Focusing on these advantages, however, misses the point. This high degree of precision isn't valuable because the method isn't _accurate_[^1].
 
-Asking candidates to implement an algorithm is a great test of their performance at deriving an algorithm. Very few organizations actually need anyone to do that. Why ask an employee to write a solution to the knapsack problem from scratch when perfectly good solutions already exist and are readily available.
+Asking candidates to implement an algorithm is a great test of their performance _at deriving an algorithm_. Few organizations actually need anyone to do that. Why ask an employee to write a solution to a well-understood problem when excellent solutions exist and are readily available?
 
-System design problems lack precision, but they're accurate. While they don't have concise rubrics, they do map to the day-to-day responsibilities of software engineers. The reason organizations pay individual contributors is to create novel solutions to their specific problems. Discussing system design allows an interviewer to pose a problem similar to ones faced by their organization and in describing a solution, an interviewee demonstrates competency because they're _doing the job they're interviewing for_.
+System design problems lack precision, but they're accurate. While they're light on quantifiable metrics, they require demonstration of the skills needed in the day-to-day responsibilities of software engineers. The reason organizations pay individual contributors is to create novel solutions to their specific problems. Discussing system design allows an interviewer to pose a problem similar to ones faced by their organization and in describing a solution, an interviewee demonstrates competency because they're _doing the job they're interviewing for_.
 
-<!-- draft stuff
-As an industry, we strive to become data-driven organizations. This is an admirable quality and confers the ability to view our business with precision and explain _why_ we do the things we do. Too often, however, this striving is myopic. Choosing an interview method that provides explicit results that can be mapped directly to a hiring decision misses the point. We want to hire competent engineers who can design and implement simple, maintainable software.
--->
-
+Asking candidates to solve contrived algorithmic problems may provide insight into how they manage memory or optimize for space or time complexity. Those skills, while _useful_, do not make an excellent software engineer. They are, at best, indicators of a skilled coder. And as is
+[often](https://tomgamon.com/posts/writing-code-is-the-easy-part/)
+[written](https://camlittle.com/posts/2020-05-04-coding-is-the-easy-part/)
+[and](https://medium.com/@alexandruhogea1/writing-code-is-easy-ad0419d85065)
+[more](https://swizec.com/blog/coding-is-the-easy-part/)
+[often](https://www.reddit.com/r/learnprogramming/comments/s2zmz1/coding_is_the_easy_part/)
+[repeated](https://pawnmaster.com/writing-code-is-the-easy-part/),
+writing code is the easy part[^2], so let's test candidates for the hard stuff.
 
 ### Algorithmic testing _can_ be useful!
-There's nothing inherently wrong with using algothrimic problems for technical interviews. When that category of problems matches the role the interview is hiring for, they're a fantastic tool. In such a case, algorithmic interview questions have _both_ precision and accuracy.
+There's nothing inherently wrong with using algothrimic problems for technical interviews. When that category of problems matches the role the interview is hiring for, they're a fantastic tool. If the role is primarily one of implementing tricky algorithms, the interview _should_ consist of implementing those algorithms. In such a case, algorithmic interview questions have _both_ precision and accuracy.
 
-### Some meta-discussion
-[draft]
-- This topic has been discussed _a lot_. Why so little organizational change?
-	- org change / fighting inertia is difficult and takes time (weak, but always plausible)
-	- orgs value precision over accuracy because it shows that they're _doing something_ and doing it deliberately, regardless of whether it furthers their goals
-	- Is this stuff necessary for this article? Follow-up article?
+[^1]: This is an example of [the McNamara fallacy](https://en.wikipedia.org/wiki/McNamara_fallacy).
+
+[^2]: This is not to say that hard programming problems don't exist, but that most folks aren't getting paid to solve those problems.
