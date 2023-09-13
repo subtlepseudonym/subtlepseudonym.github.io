@@ -39,10 +39,15 @@ Asking candidates to solve contrived algorithmic problems may provide insight in
 [repeated](https://pawnmaster.com/writing-code-is-the-easy-part/),
 writing code is the easy part[^2], so let's test candidates for the hard stuff.
 
+### Precise system design
+Accuracy is great, but it cannot stand alone. Interview questions need _some_ precision to be useful[^3]. How can system design problems be made more precise? The same way organizations judge their own success: service-level objectives (SLOs). Given a design problem, a set of SLOs should determine how well a solution performs when faced with real-world problems. How well does the solution scale with increased traffic? Does the solution consider limited resources (web hosting can get expensive)? Does the solution make tradeoffs that align with the organization's existing business constraints?
+
 ### Algorithmic testing _can_ be useful!
 There's nothing inherently wrong with using algothrimic problems for technical interviews. When that category of problems matches the role the interview is hiring for, they're a fantastic tool. If the role is primarily one of implementing tricky algorithms, the interview _should_ consist of implementing those algorithms. In such a case, algorithmic interview questions have _both_ precision and accuracy.
 
 
 [^1]: This is an example of [the McNamara fallacy](https://en.wikipedia.org/wiki/McNamara_fallacy).
 
-[^2]: This is not to say that hard programming problems don't exist, but that most folks aren't getting paid to solve those problems.
+[^2]: This is not to say that hard programming problems don't exist, but that most folks aren't getting paid to solve those problems (or, quite likely, they're under-represented in the discourse regarding tech interviews).
+
+[^3]: See [Mar's Law](https://spacecraft.ssl.umd.edu/akins_laws.html): Everything is linear if plotted log-log with a fat magic marker
