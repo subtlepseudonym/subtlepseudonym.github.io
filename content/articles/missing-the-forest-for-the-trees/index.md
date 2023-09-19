@@ -2,9 +2,6 @@
 date: 2023-07-27T13:06:12-04:00
 title: "Missing the Forest for the Trees"
 draft: false
-_build:
-  render: true
-  list: false
 ---
 [draft]
 #### Or, Yet Another Discussion of Tech Company Interview Methodology
