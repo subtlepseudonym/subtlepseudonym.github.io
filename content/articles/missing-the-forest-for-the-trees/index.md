@@ -3,7 +3,6 @@ date: 2023-07-27T13:06:12-04:00
 title: "Missing the Forest for the Trees"
 draft: false
 ---
-[draft]
 #### Or, Yet Another Discussion of Tech Company Interview Methodology
 <!-- summary -->
 The way we, as an industry, interview prospective individual contributors is exhausting and ineffective. The goal of these interviews is to hire engineers who can design and implement simple, maintainable software, so why are we asking them contrived questions about dynamic programming? Engineers ought to be at least competent programmers, but the work of software engineering is more often a question of design.
