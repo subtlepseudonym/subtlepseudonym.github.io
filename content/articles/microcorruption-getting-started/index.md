@@ -1,7 +1,7 @@
 ---
 title: "Microcorruption: Getting Started"
 date: 2024-03-25T15:36:16-04:00
-draft: true
+draft: false
 ---
 
 <!-- summary -->
