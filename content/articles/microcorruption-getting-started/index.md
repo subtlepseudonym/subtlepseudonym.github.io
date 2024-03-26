@@ -1,13 +1,8 @@
 ---
 title: "Microcorruption: Getting Started"
 date: 2024-03-25T15:36:16-04:00
-draft: false
-_build:
-  render: true
-  list: false
+draft: true
 ---
-
-[draft]
 
 <!-- summary -->
 NCC Group hosts an embedded security CTF game at [microcorruption.com](https://microcorruption.com). I'm not much of an expert in embedded anything, but the game is quite a bit of fun. I completed the first few levels a few days ago, so this is post-facto write-up, but I intend to write an article as I go for future levels.
