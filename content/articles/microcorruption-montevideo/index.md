@@ -13,6 +13,7 @@ Montevideo adds another layer of indirection to the problem we encountered in Wh
 <!-- summary -->
 
 {{< image src="gator.jpg" alt="header image" >}}
+Gator lounging in a swamp. Taken by me.
 {{< /image >}}
 
 ## First pass
