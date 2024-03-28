@@ -13,7 +13,7 @@ I sat down for this one at the end of the night hoping to take a look at it befo
 <!-- summary -->
 
 {{< image src="dragonfly.jpeg" alt="header image" >}}
-A dragonfly, briefly alighting on a blade of grass. Taken by me.
+A dragonfly, briefly alighting on a reed. Taken by me.
 {{< /image >}}
 
 ## First pass
