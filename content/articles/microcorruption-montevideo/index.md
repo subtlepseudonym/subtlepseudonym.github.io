@@ -36,6 +36,6 @@ Taking a look at the [lockitall manual](https://microcorruption.com/public/manua
 As it turns out, exactly that is possible. Encoding a password attempt with the following commands gets us in:
 - move 0x017f into r14
 - move 0x107f into r15
-- and r14 and r15 (storing in r15)
+- AND r14 and r15 (storing in r15)
 - push r15
 - call `INT`
