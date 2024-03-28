@@ -12,7 +12,7 @@ _build:
 Santa Cruz introduces the username input! We've got multiple locations to write to, new values to corrupt, and our old friend `unlock_door` plays a central role.
 <!-- summary -->
 
-{{< image src="turnstone.jpg" alt="header image" >}}
+{{< image src="turnstone.jpeg" alt="header image" >}}
 A Ruddy Turnstone running along the beach. Taken by me.
 {{< /image >}}
 

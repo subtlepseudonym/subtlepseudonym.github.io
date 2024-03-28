@@ -12,7 +12,7 @@ _build:
 I sat down for this one at the end of the night hoping to take a look at it before bed and get a sense of the problem for tomorrow. Johannesburg turned out to be a fairly small modification of Montevideo and I was able to get a working attempt string in twenty minutes or so.
 <!-- summary -->
 
-{{< image src="dragonfly.jpg" alt="header image" >}}
+{{< image src="dragonfly.jpeg" alt="header image" >}}
 A dragonfly, briefly alighting on a blade of grass. Taken by me.
 {{< /image >}}
 
