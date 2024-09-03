@@ -3,9 +3,6 @@ date: 2024-03-27T10:57:11-04:00
 title: "Microcorruption: Montevideo"
 series: "Microcorruption"
 draft: false
-_build:
-  render: true
-  list: false
 ---
 
 <!-- summary -->

@@ -3,9 +3,6 @@ date: 2024-03-28T08:06:19-04:00
 title: "Microcorruption: Johannesburg"
 series: "Microcorruption"
 draft: false
-_build:
-  render: true
-  list: false
 ---
 
 <!-- summary -->
