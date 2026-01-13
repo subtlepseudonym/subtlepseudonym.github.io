@@ -1,4 +1,8 @@
 /* Empty css file that users can override in their own /static/css/custom.css file */
+.code-samples {
+  display: none;
+}
+
 @media (max-width: 48em) {
 	.layout {
 		display: none;

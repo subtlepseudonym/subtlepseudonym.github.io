@@ -1,4 +1,8 @@
 {{ define "main" -}}
+<div class="code-samples">
+  <a href="https://rnsaffn.com/poison2/">Code Samples</a>
+</div>
+
 <div class="posts">
   {{ $pag := .Paginate (where .Site.RegularPages "Type" "articles") }}
   {{ range $pag.Pages }}
