@@ -42,7 +42,7 @@ The instructions that control writing to that section of memory are a loop from 
 ## Writing somewhere useful
 I was considering the problem of how to enable writing to the program part of memory before I realized that I'd only be able to write values up to the input length limit. Considering that limitation, I started over looking at the main function and realized that the solution was simpler than I'd thought. The `test_password_valid` function writes a 1 or 0 to memory to indicate whether the password matches. And that memory location is already writeable.
 
-Luckily, `test_password_valid` writes a 0 to indicate a password match, so unlocking the door only requires writing a non-zero value (the length of our non-verb input) to `30c6`. With the memory address and two verbs, the latter being `%n`, the door unlocks!
+Luckily, `test_password_valid` writes a 0 to indicate a password match, so unlocking the door only requires writing a non-zero value (the length of our non-verb input) to `30c6`. With the memory address and two `%n` verbs, the door unlocks!
 
 ## Finishing up
 These are a lot of fun, so I'll try to avoid going a year between puzzles again. The list of projects never seems to get any shorter though, so we'll see.
