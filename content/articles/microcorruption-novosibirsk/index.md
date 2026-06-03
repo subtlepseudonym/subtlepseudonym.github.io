@@ -1,6 +1,6 @@
 ---
 date: 2026-06-03T16:50:55-04:00
-title: "Microcorruption Novosibirsk"
+title: "Microcorruption: Novosibirsk"
 series: "Microcorruption"
 draft: false
 ---
