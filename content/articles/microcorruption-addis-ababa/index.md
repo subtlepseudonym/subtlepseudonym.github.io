@@ -2,7 +2,10 @@
 date: 2026-06-03T10:51:24-04:00
 title: "Microcorruption Addis Ababa"
 series: "Microcorruption"
-draft: true
+draft: false
+_build:
+  render: true
+  list: false
 ---
 
 <!-- summary -->
@@ -20,16 +23,16 @@ The last couple of levels tended to use long (or specific length) passwords to e
 I spent some time looking at CMP calls and an ASCII code table before realizing that the behavior of `printf` is actually documented [in the manual](https://microcorruption.com/public/manual.pdf). We've got `%s`, `%x`, `%c`, and `%n` to play with (although I didn't see any checks for `%c` in the code). The `%n` verb is the most interesting; it saves the number of characters printed so far.
 
 ## Corruption
-Playing around with a few inputs, I stumbled upon a memory error. The input `%s%x%n` produces the error `load address unaligned: 7825`. Inspecting the memory dump just after the crash revealed `%s%x` in memory starting at `30ae`. The crash happened due to this sequence of instructions:
+On my first few inputs, I stumbled upon a memory error. The input `%s%x%n` produces the error `load address unaligned: 7825`. Inspecting the memory dump just after the crash revealed `%s%x` in memory starting at `30ae`. The crash happened due to this sequence of instructions:
 
-```
+```asm
 cmp.b  #0x6e, r14
 jnz    $+0x8 <printf+0xf6>
 mov    @r9, r15
 mov    r10, 0x0(r15)
 ```
 
-So long as we're currently reading an `n` character from our input, the program will load the value pointed to by r9 (`30b0`), then write whatever's in r10 to the location pointed to by the loaded value. A little more investigation seems to show that r10 holds the number of characters preceding `%n`. This turns out to be important later.
+So long as we're currently reading an `n` character from our input, the program will load the value pointed to by r9 (`30b0` in this case), then write whatever's in r10 to the location pointed to by the loaded value. A little more investigation seems to show that r10 holds the number of characters preceding `%n`. This turns out to be important later.
 
 ## Writing something useful
 So far, all the values I've been able to write into `30b0` have included percent signs. There don't appear to be any useful memory locations ending in `25`, however. Can I write an arbitrary value to `30b0`?
@@ -42,6 +45,4 @@ I was considering the problem of how to enable writing to the program part of me
 Luckily, `test_password_valid` writes a 0 to indicate a password match, so unlocking the door only requires writing a non-zero value (the length of our non-verb input) to `30c6`. With the memory address and two verbs, the latter being `%n`, the door unlocks!
 
 ## Finishing up
-These are a lot of fun, so I'll try to avoid going a year between puzzles again. The list of projects never seems to get any shorter though, so we'll see. As of writing this, looks like someone's finally solved the Cold Lake level, so shoutout to them!
-
-![screen capture of the hardest levels on the leaderboard](cold-lake.jpeg)
+These are a lot of fun, so I'll try to avoid going a year between puzzles again. The list of projects never seems to get any shorter though, so we'll see.
