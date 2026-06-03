@@ -10,7 +10,7 @@ Multipart corruption! Like paying a lobbyist to pay a senator! This is our first
 <!-- summary -->
 
 {{< image src="piping-plover.jpeg" alt="header image" >}}
-A Piping Plover standing among rocks on the beach. Taken by me.
+A Piping Plover standing among rocks on the beach.
 {{< /image >}}
 
 ## First pass

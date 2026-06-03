@@ -10,7 +10,7 @@ Santa Cruz introduces the username input! We've got multiple locations to write 
 <!-- summary -->
 
 {{< image src="turnstone.jpeg" alt="header image" >}}
-A Ruddy Turnstone running along the beach. Taken by me.
+A Ruddy Turnstone running along the beach.
 {{< /image >}}
 
 ## First pass

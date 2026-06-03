@@ -13,7 +13,7 @@ It's been a while since I've played around with microcorruption, so I'm hoping t
 <!-- summary -->
 
 {{< image src="grumpy-bananaquit.jpeg" alt="header image" >}}
-A grumpy bananaquit. Taken by me.
+A grumpy bananaquit.
 {{< /image >}}
 
 ## First pass
