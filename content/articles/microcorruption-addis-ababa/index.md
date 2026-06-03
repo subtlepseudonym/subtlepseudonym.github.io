@@ -3,9 +3,6 @@ date: 2026-06-03T10:51:24-04:00
 title: "Microcorruption Addis Ababa"
 series: "Microcorruption"
 draft: false
-_build:
-  render: true
-  list: false
 ---
 
 <!-- summary -->

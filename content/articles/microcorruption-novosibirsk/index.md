@@ -3,9 +3,6 @@ date: 2026-06-03T16:50:55-04:00
 title: "Microcorruption Novosibirsk"
 series: "Microcorruption"
 draft: false
-_build:
-  render: true
-  list: false
 ---
 
 <!-- summary -->
